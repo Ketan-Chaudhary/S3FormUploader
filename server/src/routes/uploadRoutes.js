@@ -71,6 +71,23 @@ router.post("/", upload.single("image"), (req, res) => {
 });
 
 // Route to fetch all uploaded data
+// router.get("/data", (req, res) => {
+//   const query = "SELECT * FROM students";
+
+//   pool.query(query, (err, results) => {
+//     if (err) {
+//       console.error("Error fetching data:", err);
+//       return res.status(500).json({ message: "Internal Server Error" });
+//     }
+
+//     if (results.length === 0) {
+//       return res.status(200).json({ message: "No data available." }); // No data in the database
+//     }
+
+//     res.status(200).json(results); // Send the data as JSON if records exist
+//   });
+// });
+// Route to fetch all uploaded data
 router.get("/data", (req, res) => {
   const query = "SELECT * FROM students";
 
@@ -79,6 +96,8 @@ router.get("/data", (req, res) => {
       console.error("Error fetching data:", err);
       return res.status(500).json({ message: "Internal Server Error" });
     }
+
+    console.log("Fetched results:", results); // Log the fetched results
 
     if (results.length === 0) {
       return res.status(200).json({ message: "No data available." }); // No data in the database
