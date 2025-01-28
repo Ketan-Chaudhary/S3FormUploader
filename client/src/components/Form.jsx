@@ -14,7 +14,7 @@ const Form = () => {
     formData.append("image", image);
 
     try {
-      const response = await fetch("https://13.235.48.219:5000/upload", {
+      const response = await fetch("https://65.1.93.99:5000/upload", {
         method: "POST",
         body: formData,
       });

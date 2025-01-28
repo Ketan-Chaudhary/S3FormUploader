@@ -126,7 +126,7 @@ const port = process.env.PORT || 5000;
 // Enable CORS with specific origin (your frontend port)
 app.use(
   cors({
-    origin: "http://13.235.48.219:5174", // Update with the actual frontend URL
+    origin: "http://65.1.93.99:5000:5174", // Update with the actual frontend URL
     methods: "GET,POST",
     credentials: true,
   })
