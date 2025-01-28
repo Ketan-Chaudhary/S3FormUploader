@@ -42,7 +42,7 @@ router.post("/", upload.single("image"), (req, res) => {
     Key: `images/${Date.now()}-${image.originalname}`,
     Body: image.buffer,
     ContentType: image.mimetype,
-    ACL: "public-read",
+    ACL: "bucket-owner-full-control",
   };
 
   s3.upload(s3Params, (err, data) => {
