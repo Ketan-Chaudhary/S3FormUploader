@@ -12,7 +12,7 @@ const port = process.env.PORT || 5000;
 // List of allowed origins (local development + Vercel frontend)
 const allowedOrigins = [
   "http://localhost:5174", // Local development URL
-  "https://node-app-green.vercel.app", // Vercel frontend URL
+  "https://node-app-green.vercel.app/data", // Vercel frontend URL
 ];
 
 // Enable CORS with the allowed origins
