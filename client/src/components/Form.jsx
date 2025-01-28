@@ -14,7 +14,7 @@ const Form = () => {
     formData.append("image", image);
 
     try {
-      const response = await fetch("http://13.235.48.219:5000/upload", {
+      const response = await fetch(`http://${process.env.AWS_IP}:5000/upload`, {
         method: "POST",
         body: formData,
       });

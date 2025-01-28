@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: "http://13.235.48.219:5174",
+    origin: `http://${process.env.AWS_IP}:5174`,
     methods: "GET,POST",
     credentials: true,
   })
