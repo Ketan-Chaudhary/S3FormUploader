@@ -16,26 +16,26 @@
 // export default App;
 
 // src/App.jsx
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import Form from "./components/Form";
-import DataPage from "./components/DataPage";
+import UploadedData from "./components/UploadedData";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <h1>Upload Data</h1>
-        <Form />
-        <Link to="/data">
-          <button>Go to Data Page</button>
-        </Link>
+    <div className="App">
+      <h1>Upload Data</h1>
+      <Link to="/">
+        <button>Go to Form Page</button>
+      </Link>
+      <Link to="/data">
+        <button>Go to Uploaded Data</button>
+      </Link>
 
-        <Switch>
-          <Route exact path="/" component={Form} />
-          <Route path="/data" component={DataPage} />
-        </Switch>
-      </div>
-    </Router>
+      <Routes>
+        <Route path="/" element={<Form />} />
+        <Route path="/data" element={<UploadedData />} />
+      </Routes>
+    </div>
   );
 }
 
