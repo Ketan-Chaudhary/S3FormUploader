@@ -72,7 +72,7 @@ const Form = () => {
     formData.append("image", image);
 
     try {
-      const response = await fetch("http://35.154.22.60:5000/upload", {
+      const response = await fetch("http://13.235.81.142:5000/upload", {
         method: "POST",
         body: formData,
       });
