@@ -7,7 +7,7 @@ const UploadedData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://65.1.93.99:5000/upload/data");
+        const response = await fetch("http://35.154.22.60:5000/upload/data");
         const result = await response.json();
 
         if (result.message === "No data available.") {

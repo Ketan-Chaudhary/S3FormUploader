@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: "http://65.1.93.99:5174",
+    origin: "http://35.154.22.60:5174",
     methods: "GET,POST",
     credentials: true,
   })
