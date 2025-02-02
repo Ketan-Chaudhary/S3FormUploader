@@ -33,7 +33,7 @@ Before running the project, make sure you have the following:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/simple-form-image-upload.git
+git clone https://github.com/Ketan-Chaudhary/S3FormUploader.git
 ```
 
 
